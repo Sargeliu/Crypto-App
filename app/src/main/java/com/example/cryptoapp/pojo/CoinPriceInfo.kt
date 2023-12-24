@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class CoinPriceInfo(
 
 	@field:SerializedName("CONVERSIONTYPE")
-	val cONVERSIONTYPE: String? = null,
+	val conversionType: String? = null,
 
 	@field:SerializedName("LASTTRADEID")
 	val lasttRadeid: String? = null,
@@ -14,25 +14,25 @@ data class CoinPriceInfo(
 	val open24Hour: String? = null,
 
 	@field:SerializedName("HIGHDAY")
-	val hIGHDAY: String? = null,
+	val highDay: String? = null,
 
 	@field:SerializedName("LOW24HOUR")
-	val lOW24HOUR: String? = null,
+	val low24Hour: String? = null,
 
 	@field:SerializedName("TOPTIERVOLUME24HOUR")
-	val tOPTIERVOLUME24HOUR: String? = null,
+	val topTierVolume24Hour: String? = null,
 
 	@field:SerializedName("TOTALVOLUME24HTO")
-	val tOTALVOLUME24HTO: String? = null,
+	val totalVolume24Hto: String? = null,
 
 	@field:SerializedName("TOSYMBOL")
 	val toSymbol: String? = null,
 
 	@field:SerializedName("LASTMARKET")
-	val lASTMARKET: String? = null,
+	val lastMarket: String? = null,
 
 	@field:SerializedName("LASTVOLUME")
-	val lASTVOLUME: String? = null,
+	val lastVolume: String? = null,
 
 	@field:SerializedName("CIRCULATINGSUPPLY")
 	val cIRCULATINGSUPPLY: String? = null,
@@ -80,13 +80,13 @@ data class CoinPriceInfo(
 	val type: String? = null,
 
 	@field:SerializedName("IMAGEURL")
-	val iMAGEURL: String? = null,
+	val imageUrl: String? = null,
 
 	@field:SerializedName("VOLUMEDAY")
-	val vOLUMEDAY: String? = null,
+	val volumeDay: String? = null,
 
 	@field:SerializedName("VOLUME24HOUR")
-	val vOLUME24HOUR: String? = null,
+	val volume24Hour: String? = null,
 
 	@field:SerializedName("MARKET")
 	val market: String? = null,
