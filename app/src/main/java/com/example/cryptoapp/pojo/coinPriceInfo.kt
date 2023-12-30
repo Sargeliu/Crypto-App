@@ -2,28 +2,28 @@ package com.example.cryptoapp.pojo
 
 import com.google.gson.annotations.SerializedName
 
-data class CoinPriceInfo(
+data class coinPriceInfo(
 
 	@field:SerializedName("CONVERSIONTYPE")
 	val conversionType: String? = null,
 
 	@field:SerializedName("LASTTRADEID")
-	val lasttRadeid: String? = null,
+	val lastTradeid: String? = null,
 
 	@field:SerializedName("OPEN24HOUR")
-	val open24Hour: String? = null,
+	val opeN24HOUR: String? = null,
 
 	@field:SerializedName("HIGHDAY")
 	val highDay: String? = null,
 
 	@field:SerializedName("LOW24HOUR")
-	val low24Hour: String? = null,
+	val low24HOUR: String? = null,
 
 	@field:SerializedName("TOPTIERVOLUME24HOUR")
 	val topTierVolume24Hour: String? = null,
 
 	@field:SerializedName("TOTALVOLUME24HTO")
-	val totalVolume24Hto: String? = null,
+	val totalVolume24HTO: String? = null,
 
 	@field:SerializedName("TOSYMBOL")
 	val toSymbol: String? = null,
@@ -35,46 +35,46 @@ data class CoinPriceInfo(
 	val lastVolume: String? = null,
 
 	@field:SerializedName("CIRCULATINGSUPPLY")
-	val cIRCULATINGSUPPLY: String? = null,
+	val circulatingSupply: String? = null,
 
 	@field:SerializedName("LOWHOUR")
-	val lOWHOUR: String? = null,
+	val lowHour: String? = null,
 
 	@field:SerializedName("CONVERSIONSYMBOL")
-	val cONVERSIONSYMBOL: String? = null,
+	val conversionSymbol: String? = null,
 
 	@field:SerializedName("MKTCAP")
-	val mKTCAP: String? = null,
+	val mktCap: String? = null,
 
 	@field:SerializedName("LASTUPDATE")
 	val lastUpdate: String? = null,
 
 	@field:SerializedName("CHANGEPCTHOUR")
-	val cHANGEPCTHOUR: String? = null,
+	val changePCTHour: String? = null,
 
 	@field:SerializedName("TOTALVOLUME24H")
-	val tOTALVOLUME24H: String? = null,
+	val totalVolume24H: String? = null,
 
 	@field:SerializedName("VOLUMEHOURTO")
-	val vOLUMEHOURTO: String? = null,
+	val volumeHourTo: String? = null,
 
 	@field:SerializedName("VOLUMEHOUR")
-	val vOLUMEHOUR: String? = null,
+	val volumeHour: String? = null,
 
 	@field:SerializedName("TOPTIERVOLUME24HOURTO")
-	val tOPTIERVOLUME24HOURTO: String? = null,
+	val topTierVolume24HourTo: String? = null,
 
 	@field:SerializedName("CHANGEDAY")
-	val cHANGEDAY: String? = null,
+	val changeDay: String? = null,
 
 	@field:SerializedName("FLAGS")
-	val fLAGS: String? = null,
+	val flags: String? = null,
 
 	@field:SerializedName("SUPPLY")
-	val sUPPLY: String? = null,
+	val supply: String? = null,
 
 	@field:SerializedName("MEDIAN")
-	val mEDIAN: Any? = null,
+	val median: Any? = null,
 
 	@field:SerializedName("TYPE")
 	val type: String? = null,
@@ -95,56 +95,56 @@ data class CoinPriceInfo(
 	val price: String? = null,
 
 	@field:SerializedName("CHANGEPCTDAY")
-	val cHANGEPCTDAY: String? = null,
+	val changePCTDay: String? = null,
 
 	@field:SerializedName("TOTALTOPTIERVOLUME24H")
-	val tOTALTOPTIERVOLUME24H: String? = null,
+	val totalTopTierVolume24H: String? = null,
 
 	@field:SerializedName("CONVERSIONLASTUPDATE")
-	val cONVERSIONLASTUPDATE: String? = null,
+	val conversionLastUpdate: String? = null,
 
 	@field:SerializedName("FROMSYMBOL")
 	val fromSymbol: String? = null,
 
 	@field:SerializedName("LASTVOLUMETO")
-	val lASTVOLUMETO: String? = null,
+	val lastVolumeTo: String? = null,
 
 	@field:SerializedName("CIRCULATINGSUPPLYMKTCAP")
-	val cIRCULATINGSUPPLYMKTCAP: String? = null,
+	val circulatingSupplyMKTCap: String? = null,
 
 	@field:SerializedName("CHANGEPCT24HOUR")
-	val cHANGEPCT24HOUR: String? = null,
+	val changePCT24Hour: String? = null,
 
 	@field:SerializedName("OPENDAY")
-	val oPENDAY: String? = null,
+	val openDay: String? = null,
 
 	@field:SerializedName("TOTALTOPTIERVOLUME24HTO")
-	val tOTALTOPTIERVOLUME24HTO: String? = null,
+	val totalTopTierVolume24HTO: String? = null,
 
 	@field:SerializedName("VOLUMEDAYTO")
-	val vOLUMEDAYTO: String? = null,
+	val volumeDayTo: String? = null,
 
 	@field:SerializedName("OPENHOUR")
-	val oPENHOUR: String? = null,
+	val openHour: String? = null,
 
 	@field:SerializedName("CHANGE24HOUR")
-	val cHANGE24HOUR: String? = null,
+	val change24Hour: String? = null,
 
 	@field:SerializedName("CHANGEHOUR")
-	val cHANGEHOUR: String? = null,
+	val changeHour: String? = null,
 
 	@field:SerializedName("HIGH24HOUR")
-	val hIGH24HOUR: String? = null,
+	val higH24Hour: String? = null,
 
 	@field:SerializedName("VOLUME24HOURTO")
-	val vOLUME24HOURTO: String? = null,
+	val volume24HourTo: String? = null,
 
 	@field:SerializedName("HIGHHOUR")
-	val hIGHHOUR: String? = null,
+	val highHour: String? = null,
 
 	@field:SerializedName("LOWDAY")
-	val lOWDAY: String? = null,
+	val lowDay: String? = null,
 
 	@field:SerializedName("MKTCAPPENALTY")
-	val mKTCAPPENALTY: String? = null
+	val MKTCapPenalty: String? = null
 )
