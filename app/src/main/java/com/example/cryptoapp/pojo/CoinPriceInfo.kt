@@ -1,8 +1,11 @@
 package com.example.cryptoapp.pojo
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-data class coinPriceInfo(
+@Entity(tableName = "full_price_list")
+data class CoinPriceInfo(
 
 	@field:SerializedName("CONVERSIONTYPE")
 	val conversionType: String? = null,
@@ -103,6 +106,7 @@ data class coinPriceInfo(
 	@field:SerializedName("CONVERSIONLASTUPDATE")
 	val conversionLastUpdate: String? = null,
 
+	@PrimaryKey
 	@field:SerializedName("FROMSYMBOL")
 	val fromSymbol: String? = null,
 
