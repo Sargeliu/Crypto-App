@@ -2,6 +2,8 @@ package com.example.cryptoapp.pojo
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.cryptoapp.api.ApiFactory.BASE_IMAGE_URL
+import com.example.cryptoapp.utils.convertTimestampToTime
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "full_price_list")
@@ -50,7 +52,7 @@ data class CoinPriceInfo(
 	val mktCap: String? = null,
 
 	@field:SerializedName("LASTUPDATE")
-	val lastUpdate: String? = null,
+	val lastUpdate: Long? = null,
 
 	@field:SerializedName("CHANGEPCTHOUR")
 	val changePCTHour: String? = null,
@@ -151,4 +153,13 @@ data class CoinPriceInfo(
 
 	@field:SerializedName("MKTCAPPENALTY")
 	val MKTCapPenalty: String? = null
-)
+) {
+	fun getFormattedTime(): String {
+		return convertTimestampToTime(lastUpdate)
+	}
+
+	fun getFullImageUrl(): String {
+		return BASE_IMAGE_URL + imageUrl
+	}
+}
+
