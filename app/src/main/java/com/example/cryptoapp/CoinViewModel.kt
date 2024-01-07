@@ -11,6 +11,7 @@ import com.example.cryptoapp.pojo.CoinPriceInfoRawData
 import com.google.gson.Gson
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
 
 class CoinViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -19,19 +20,23 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
 
     val priceList = db.coinPriceInfoDao().getPriceList()
 
+    fun getDetailInfo(fsym: String): LiveData<CoinPriceInfo> {
+        return db.coinPriceInfoDao().getPriceInfoAboutCoin(fsym)
+    }
+
     init {
         loadData()
     }
 
-    fun getDetailInfo(fsym: String): LiveData<CoinPriceInfo> {
-        return db.coinPriceInfoDao().getPriceInfoAboutCoin(fsym)
-    }
 
     private fun loadData() {
         val disposable = ApiFactory.apiService.getTopCoinsInfo(limit = 50)
             .map { it.data?.map { it?.coinInfo?.name }?.joinToString(",") ?: "" }
             .flatMap { ApiFactory.apiService.getFullPriceList(fSyms = it) }
             .map { getPriceListFromRawData(it) }
+            .delaySubscription(10, TimeUnit.SECONDS)
+            .repeat()
+            .retry()
             .subscribeOn(Schedulers.io())
             .subscribe({
                 db.coinPriceInfoDao().insertPriceList(it)
