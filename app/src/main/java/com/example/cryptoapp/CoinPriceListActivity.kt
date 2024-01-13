@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.cryptoapp.adapters.CoinInfoAdapter
 import com.example.cryptoapp.databinding.ActivityCoinPriceListBinding
 import com.example.cryptoapp.databinding.ItemCoinInfoBinding
+import com.example.cryptoapp.pojo.CoinPriceInfo
 
 class CoinPriceListActivity : AppCompatActivity() {
 
@@ -17,11 +18,17 @@ class CoinPriceListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_coin_price_list)
+        viewModel = ViewModelProvider(this)[CoinViewModel::class.java]
         binding = ActivityCoinPriceListBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val adapter = CoinInfoAdapter()
+        adapter.onCoinClickListener = object : CoinInfoAdapter.OnCoinClickListener {
+            override fun onCoinClick(coinPriceInfo: CoinPriceInfo) {
+
+            }
+
+        }
         binding.rvCoinPriceList.adapter = adapter
-        viewModel = ViewModelProvider(this)[CoinViewModel::class.java]
         viewModel.priceList.observe(this, Observer {
             adapter.coinInfoList = it
         })
